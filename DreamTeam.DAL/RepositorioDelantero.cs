@@ -8,32 +8,33 @@ using System.Text;
 
 namespace DreamTeam.DAL
 {
-    public class RepositorioPortero : IRepositorio<Portero>
+    public class RepositorioDelantero : IRepositorio<Delantero>
     {
 
         private string DBName = "DreamTeam.db";
-        private string TableName = "Portero";
+        private string TableName = "Delantero";
 
-        public List<Portero> Read {
+        public List<Delantero> Read
+        {
             get
             {
-                List<Portero> datosPortero = new List<Portero>();
+                List<Delantero> datosDelantero = new List<Delantero>();
                 using (var db = new LiteDatabase(DBName))
                 {
-                    datosPortero = db.GetCollection<Portero>(TableName).FindAll().ToList();
+                    datosDelantero = db.GetCollection<Delantero>(TableName).FindAll().ToList();
                 }
-                return datosPortero;
+                return datosDelantero;
             }
         }
 
-        public bool Create(Portero entidad)
+        public bool Create(Delantero entidad)
         {
             entidad.Id = Guid.NewGuid().ToString();
             try
             {
                 using (var db = new LiteDatabase(DBName))
                 {
-                    var coleccion = db.GetCollection<Portero>(TableName);
+                    var coleccion = db.GetCollection<Delantero>(TableName);
                     coleccion.Insert(entidad);
                 }
                 return true;
@@ -50,7 +51,7 @@ namespace DreamTeam.DAL
             {
                 using (var db = new LiteDatabase(DBName))
                 {
-                    var coleccion = db.GetCollection<Portero>(TableName);
+                    var coleccion = db.GetCollection<Delantero>(TableName);
                     coleccion.Delete(Convert.ToString(Id));
                 }
                 return true;
@@ -61,13 +62,13 @@ namespace DreamTeam.DAL
             }
         }
 
-        public bool Update(Portero entidadModificada)
+        public bool Update(Delantero entidadModificada)
         {
             try
             {
                 using (var db = new LiteDatabase(DBName))
                 {
-                    var coleccion = db.GetCollection<Portero>(TableName);
+                    var coleccion = db.GetCollection<Delantero>(TableName);
                     coleccion.Update(entidadModificada);
                 }
                 return true;
@@ -77,7 +78,6 @@ namespace DreamTeam.DAL
                 return false;
             }
         }
-        
-        
+
     }
 }

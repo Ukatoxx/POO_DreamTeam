@@ -1,0 +1,475 @@
+﻿<Window x:Class="Dreamteam.GUI.Usuario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dreamteam.GUI.Usuario"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Portero">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+                    <Button x:Name="btnPorteroNuevo" Click="BtnPorteroNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnPorteroEditar" Click="BtnPorteroEditar_Click">Editar</Button>
+                    <Button x:Name="btnPorteroGuardar" Click="BtnPorteroGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnPorteroCancelar" Click="BtnPorteroCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnPorteroEliminar" Click="BtnPorteroEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Orientation="vertical" HorizontalAlignment="center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Id:</TextBlock>
+                        <TextBlock x:Name="txbPorteroId" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150" >Nombre:</TextBlock>
+                        <TextBox x:Name="txbPorteroNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Posición específica:</TextBlock>
+                        <ComboBox x:Name="txbPorteroPosicionEspecifica" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Portero"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Altura:</TextBlock>
+                        <TextBox x:Name="txbPorteroAltura" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Peso:</TextBlock>
+                        <TextBox x:Name="txbPorteroPeso" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Pie hábil:</TextBlock>
+                        <ComboBox x:Name="txbPorteroPieHabil" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Derecho"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Edad:</TextBlock>
+                        <TextBox x:Name="txbPorteroEdad" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Precio:</TextBlock>
+                        <TextBox x:Name="txbPorteroPrecio" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Sueldo:</TextBlock>
+                        <TextBox x:Name="txbPorteroSueldo" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Habilidad balón:</TextBlock>
+                        <TextBox x:Name="txbPorteroHabilidadBalon" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor defensa:</TextBlock>
+                        <TextBox x:Name="txbPorteroDefensaVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor mental:</TextBlock>
+                        <TextBox x:Name="txbPorteroMentalVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor pase:</TextBlock>
+                        <TextBox x:Name="txbPorteroPaseVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor físico:</TextBlock>
+                        <TextBox x:Name="txbPorteroFisicoVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor tiros:</TextBlock>
+                        <TextBox x:Name="txbPorteroTirosVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor portero:</TextBlock>
+                        <TextBox x:Name="txbPorteroPorteroVal" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgPortero" Grid.Row="2" IsReadOnly="True" HorizontalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Defensa">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+                    <Button x:Name="btnDefensaNuevo" Click="BtnDefensaNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnDefensaEditar" Click="BtnDefensaEditar_Click">Editar</Button>
+                    <Button x:Name="btnDefensaGuardar" Click="BtnDefensaGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnDefensaCancelar" Click="BtnDefensaCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnDefensaEliminar" Click="BtnDefensaEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Orientation="vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Id:</TextBlock>
+                        <TextBlock x:Name="txbDefensaId" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Nombre:</TextBlock>
+                        <TextBox x:Name="txbDefensaNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Posición específica:</TextBlock>
+                        <ComboBox x:Name="txbDefensaPosicionEspecifica" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Defensa Central"></ComboBoxItem>
+                            <ComboBoxItem Content="Lateral Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Lateral Derecho"></ComboBoxItem>
+                            <ComboBoxItem Content="Carrilero Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Carrilero Derecho"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Altura:</TextBlock>
+                        <TextBox x:Name="txbDefensaAltura" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Peso:</TextBlock>
+                        <TextBox x:Name="txbDefensaPeso" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Pie hábil:</TextBlock>
+                        <ComboBox x:Name="txbDefensaPieHabil" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Derecho"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Edad:</TextBlock>
+                        <TextBox x:Name="txbDefensaEdad" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Precio:</TextBlock>
+                        <TextBox x:Name="txbDefensaPrecio" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Sueldo:</TextBlock>
+                        <TextBox x:Name="txbDefensaSueldo" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Habilidad balón:</TextBlock>
+                        <TextBox x:Name="txbDefensaHabilidadBalon" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor defensa:</TextBlock>
+                        <TextBox x:Name="txbDefensaDefensaVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor mental:</TextBlock>
+                        <TextBox x:Name="txbDefensaMentalVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor pase:</TextBlock>
+                        <TextBox x:Name="txbDefensaPaseVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor físico:</TextBlock>
+                        <TextBox x:Name="txbDefensaFisicoVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor tiros:</TextBlock>
+                        <TextBox x:Name="txbDefensaTirosVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor portero:</TextBlock>
+                        <TextBox x:Name="txbDefensaPorteroVal" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgDefensa" Grid.Row="2" IsReadOnly="True" HorizontalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Medio campo">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+                    <Button x:Name="btnMediocampoNuevo" Click="BtnMediocampoNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnMediocampoEditar" Click="BtnMediocampoEditar_Click">Editar</Button>
+                    <Button x:Name="btnMediocampoGuardar" Click="BtnMediocampoGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnMediocampoCancelar" Click="BtnMediocampoCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnMediocampoEliminar" Click="BtnMediocampoEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Id:</TextBlock>
+                        <TextBlock x:Name="txbMediocampoId" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Nombre:</TextBlock>
+                        <TextBox x:Name="txbMediocampoNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Posición específica:</TextBlock>
+                        <ComboBox x:Name="txbMediocampoPosicionEspecifica" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Mediocentro Defensivo"></ComboBoxItem>
+                            <ComboBoxItem Content="Medio Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Medio Derecho"></ComboBoxItem>
+                            <ComboBoxItem Content="Medio Centro"></ComboBoxItem>
+                            <ComboBoxItem Content="Medio Centro Ofensivo"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Altura:</TextBlock>
+                        <TextBox x:Name="txbMediocampoAltura" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Peso:</TextBlock>
+                        <TextBox x:Name="txbMediocampoPeso" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Pie hábil:</TextBlock>
+                        <ComboBox x:Name="txbMediocampoPieHabil" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Derecho"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Edad:</TextBlock>
+                        <TextBox x:Name="txbMediocampoEdad" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Precio:</TextBlock>
+                        <TextBox x:Name="txbMediocampoPrecio" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Sueldo:</TextBlock>
+                        <TextBox x:Name="txbMediocampoSueldo" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Habilidad balón:</TextBlock>
+                        <TextBox x:Name="txbMediocampoHabilidadBalon" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor defensa:</TextBlock>
+                        <TextBox x:Name="txbMediocampoDefensaVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor mental:</TextBlock>
+                        <TextBox x:Name="txbMediocampoMentalVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor pase:</TextBlock>
+                        <TextBox x:Name="txbMediocampoPaseVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor físico:</TextBlock>
+                        <TextBox x:Name="txbMediocampoFisicoVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor tiros:</TextBlock>
+                        <TextBox x:Name="txbMediocampoTirosVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor portero:</TextBlock>
+                        <TextBox x:Name="txbMediocampoPorteroVal" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgMediocampo" Grid.Row="2" IsReadOnly="True" HorizontalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Delantero">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="103*"/>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="630*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" Grid.ColumnSpan="4"  HorizontalAlignment="Center">
+                    <Button x:Name="btnDelanteroNuevo" Click="BtnDelanteroNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnDelanteroEditar" Click="BtnDelanteroEditar_Click">Editar</Button>
+                    <Button x:Name="btnDelanteroGuardar" Click="BtnDelanteroGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnDelanteroCancelar" Click="BtnDelanteroCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnDelanteroEliminar" Click="BtnDelanteroEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Id:</TextBlock>
+                        <TextBlock x:Name="txbDelanteroId" Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Nombre:</TextBlock>
+                        <TextBox x:Name="txbDelanteroNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Posición específica:</TextBlock>
+                        <ComboBox x:Name="txbDelanteroPosicionEspecifica" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Extremo Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Extremo Derecho"></ComboBoxItem>
+                            <ComboBoxItem Content="Segundo Delantero"></ComboBoxItem>
+                            <ComboBoxItem Content="Delantero"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Altura:</TextBlock>
+                        <TextBox x:Name="txbDelanteroAltura" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Peso:</TextBlock>
+                        <TextBox x:Name="txbDelanteroPeso" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Pie hábil:</TextBlock>
+                        <ComboBox x:Name="txbDelanteroPieHabil" Width="200"
+                                  VerticalAlignment="Center" Visibility="Visible">
+                            <ComboBoxItem Content="Izquierdo"></ComboBoxItem>
+                            <ComboBoxItem Content="Derecho"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Edad:</TextBlock>
+                        <TextBox x:Name="txbDelanteroEdad" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Precio:</TextBlock>
+                        <TextBox x:Name="txbDelanteroPrecio" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Sueldo:</TextBlock>
+                        <TextBox x:Name="txbDelanteroSueldo" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Habilidad balón:</TextBlock>
+                        <TextBox x:Name="txbDelanteroHabilidadBalon" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor defensa:</TextBlock>
+                        <TextBox x:Name="txbDelanteroDefensaVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor mental:</TextBlock>
+                        <TextBox x:Name="txbDelanteroMentalVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor pase:</TextBlock>
+                        <TextBox x:Name="txbDelanteroPaseVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor físico:</TextBlock>
+                        <TextBox x:Name="txbDelanteroFisicoVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor tiros:</TextBlock>
+                        <TextBox x:Name="txbDelanteroTirosVal" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="150">Valor portero:</TextBlock>
+                        <TextBox x:Name="txbDelanteroPorteroVal" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgDelantero" IsReadOnly="True" Grid.ColumnSpan="4" 
+                          Grid.Row="2" HorizontalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Formaciones">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="103*"/>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="630*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <Label>¿Qué estilo de formación prefieres?</Label>
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="btnFormacionDefensiva" Click="BtnFormacionDefensiva_Click">Formación defensiva</Button>
+                        <Label></Label>
+                        <Button x:Name="btnFormacionEquilibrada" Click="BtnFormacionEquilibrada_Click">Formación equilibrada</Button>
+                        <Label></Label>
+                        <Button x:Name="btnFormacionOfensiva" Click="BtnFormacionOfensiva_Click">Formación ofensiva</Button>
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Grid.Row="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" Orientation="Vertical">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Label x:Name="lblTituloDefensiva">Formaciones Defensivas</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckDefensiva">
+                        <RadioButton x:Name="btnFormacionDefensiva1" >5-3-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionDefensiva2" >5-5-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionDefensiva3" >5-2-2-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionDefensiva4" >5-2-1-2</RadioButton>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <Label x:Name="lblTituloEquilibrada">Formaciones Equilibradas</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckEquilibrada1">
+                        <RadioButton x:Name="btnFormacionEquilibrada1" >4-5-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada2" >4-4-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada3" >4-4-1-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada4" >4-3-3</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada5" >4-3-2-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada6" >4-3-1-2</RadioButton>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckEquilibrada2">
+                        <RadioButton x:Name="btnFormacionEquilibrada7" >4-2-4</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada8" >4-2-3-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada9" >4-2-2-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada10" >4-1-4-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada11" >4-1-3-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionEquilibrada12" >4-1-2-1-2</RadioButton>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <Label x:Name="lblTituloOfensiva">Formaciones Ofensivas</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckOfensiva1">
+                        <RadioButton x:Name="btnFormacionOfensiva1" >3-5-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionOfensiva2" >3-4-3</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionOfensiva3" >3-4-2-1</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionOfensiva4" >3-4-1-2</RadioButton>
+                        <Label></Label>
+                        <RadioButton x:Name="btnFormacionOfensiva5" >3-1-4-2</RadioButton>
+                    </StackPanel>
+                </WrapPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
