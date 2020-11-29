@@ -9,6 +9,7 @@ namespace DreamTeam.COMMON.Interfaces
     {
         bool Agregar(T entidad);
         List<T> Listar { get; }
+        List<T> ListarAltura { get; }
         bool Eliminar(string Id);
         bool Modificar(T entidad);
         T BuscarPorId(string Id);

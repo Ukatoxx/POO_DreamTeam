@@ -413,61 +413,88 @@
                     </StackPanel>
                 </WrapPanel>
                 <WrapPanel Grid.Row="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" Orientation="Vertical">
+
+                    <StackPanel Orientation="Vertical" x:Name="stckCaracteristica" HorizontalAlignment="Center">
+                        <Label></Label>
+                        <Label>¿Qué característica desea que posea el equipo?</Label>
+                        <Label></Label>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkJugadoresJovenes" 
+                                     Click="ChkJugadoresJovenes_Click">Jugadores jóvenes.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkHabilidadBalon"
+                                     Click="ChkHabilidadBalon_Click">Alta habilidad de balón.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkHabilidadDefensiva"
+                                     Click="ChkHabilidadDefensiva_Click">Alta habilidad defensiva.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkHabilidadMental"
+                                     Click="ChkHabilidadMental_Click">Alta habilidad mental.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkHabilidadPase"
+                                     Click="ChkHabilidadPase_Click">Alta habilidad de pase.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkRendimientoFisico"
+                                     Click="ChkRendimientoFisico_Click">Alto rendimiento físico.</RadioButton>
+                        <RadioButton HorizontalAlignment="Center" x:Name="chkHabilidadTiroArco"
+                                     Click="ChkHabilidadTiroArco_Click">Alta habilidad de tiro a arco.</RadioButton>
+                    </StackPanel>
+
                     <StackPanel HorizontalAlignment="Center">
-                        <Label x:Name="lblTituloDefensiva">Formaciones Defensivas</Label>
+                        <Label x:Name="lblTituloDefensiva">Posibles Formaciones Defensivas</Label>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckDefensiva">
-                        <RadioButton x:Name="btnFormacionDefensiva1" >5-3-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva1" Click="BtnFormacionDefensiva1_Click">5-3-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva2" >5-5-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva2" Click="BtnFormacionDefensiva2_Click">5-5-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva3" >5-2-2-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva3" Click="BtnFormacionDefensiva3_Click">5-2-2-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva4" >5-2-1-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva4" Click="BtnFormacionDefensiva4_Click">5-2-1-2</RadioButton>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
-                        <Label x:Name="lblTituloEquilibrada">Formaciones Equilibradas</Label>
+                        <Label x:Name="lblTituloEquilibrada">Posibles Formaciones Equilibradas</Label>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckEquilibrada1">
-                        <RadioButton x:Name="btnFormacionEquilibrada1" >4-5-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada1" Click="BtnFormacionEquilibrada1_Click">4-5-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada2" >4-4-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada2" Click="BtnFormacionEquilibrada2_Click">4-4-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada3" >4-4-1-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada3" Click="BtnFormacionEquilibrada3_Click">4-4-1-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada4" >4-3-3</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada4" Click="BtnFormacionEquilibrada4_Click">4-3-3</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada5" >4-3-2-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada5" Click="BtnFormacionEquilibrada5_Click">4-3-2-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada6" >4-3-1-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada6" Click="BtnFormacionEquilibrada6_Click">4-3-1-2</RadioButton>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckEquilibrada2">
-                        <RadioButton x:Name="btnFormacionEquilibrada7" >4-2-4</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada7" Click="BtnFormacionEquilibrada7_Click">4-2-4</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada8" >4-2-3-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada8" Click="BtnFormacionEquilibrada8_Click">4-2-3-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada9" >4-2-2-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada9" Click="BtnFormacionEquilibrada9_Click">4-2-2-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada10" >4-1-4-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada10" Click="BtnFormacionEquilibrada10_Click">4-1-4-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada11" >4-1-3-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada11" Click="BtnFormacionEquilibrada11_Click">4-1-3-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionEquilibrada12" >4-1-2-1-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionEquilibrada12" Click="BtnFormacionEquilibrada12_Click">4-1-2-1-2</RadioButton>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
-                        <Label x:Name="lblTituloOfensiva">Formaciones Ofensivas</Label>
+                        <Label x:Name="lblTituloOfensiva">Posibles Formaciones Ofensivas</Label>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckOfensiva1">
-                        <RadioButton x:Name="btnFormacionOfensiva1" >3-5-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionOfensiva1" 
+                                     Click="BtnFormacionOfensiva1_Click_1">3-5-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionOfensiva2" >3-4-3</RadioButton>
+                        <RadioButton x:Name="btnFormacionOfensiva2" 
+                                     Click="BtnFormacionOfensiva2_Click">3-4-3</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionOfensiva3" >3-4-2-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionOfensiva3" 
+                                     Click="BtnFormacionOfensiva3_Click">3-4-2-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionOfensiva4" >3-4-1-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionOfensiva4" 
+                                     Click="BtnFormacionOfensiva4_Click">3-4-1-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionOfensiva5" >3-1-4-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionOfensiva5" 
+                                     Click="BtnFormacionOfensiva5_Click">3-1-4-2</RadioButton>
                     </StackPanel>
+                    
                 </WrapPanel>
             </Grid>
         </TabItem>

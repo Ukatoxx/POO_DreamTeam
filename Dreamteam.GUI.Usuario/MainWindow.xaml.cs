@@ -68,6 +68,7 @@ namespace Dreamteam.GUI.Usuario
             stckEquilibrada2.Visibility = System.Windows.Visibility.Hidden;
             lblTituloOfensiva.Visibility = System.Windows.Visibility.Hidden;
             stckOfensiva1.Visibility = System.Windows.Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Hidden;
         }
 
         private void BotonesModoEdicion(bool value)
@@ -103,6 +104,7 @@ namespace Dreamteam.GUI.Usuario
             btnDelanteroNuevo.IsEnabled = !value;
         }
 
+        #region CRUD PORTERO
         //
         //DESARROLLO DE PORTERO
         //
@@ -266,7 +268,9 @@ namespace Dreamteam.GUI.Usuario
         //
         //FIN DESARROLLO PORTERO
         //
+        #endregion
 
+        #region CRUD DEFENSA
         //
         //DESARROLLO DE DEFENSA
         //
@@ -429,8 +433,9 @@ namespace Dreamteam.GUI.Usuario
         //
         //FIN DESARROLLO DEFENSA
         //
+        #endregion
 
-
+        #region CRUD MEDIO CAMPO
         //
         //DESARROLLO DE MEDIOCAMPO
         //
@@ -594,7 +599,9 @@ namespace Dreamteam.GUI.Usuario
         //
         //FIN DESARROLLO MEDIOCAMPO
         //
+        #endregion
 
+        #region CRUD DELANTERO
         //
         //DESARROLLO DE DELANTERO
         //
@@ -758,39 +765,282 @@ namespace Dreamteam.GUI.Usuario
         //
         //FIN DESARROLLO DELANTERO
         //
+        #endregion
 
         private void BtnFormacionDefensiva_Click(object sender, RoutedEventArgs e)
         {
-            lblTituloDefensiva.Visibility = System.Windows.Visibility.Visible;
-            stckDefensiva.Visibility = System.Windows.Visibility.Visible;
-            lblTituloEquilibrada.Visibility = System.Windows.Visibility.Hidden;
-            stckEquilibrada1.Visibility = System.Windows.Visibility.Hidden;
-            stckEquilibrada2.Visibility = System.Windows.Visibility.Hidden;
-            lblTituloOfensiva.Visibility = System.Windows.Visibility.Hidden;
-            stckOfensiva1.Visibility = System.Windows.Visibility.Hidden;
+            btnFormacionEquilibrada.Visibility = Visibility.Hidden;
+            btnFormacionOfensiva.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Visible;
         }
 
         private void BtnFormacionEquilibrada_Click(object sender, RoutedEventArgs e)
         {
-            lblTituloDefensiva.Visibility = System.Windows.Visibility.Hidden;
-            stckDefensiva.Visibility = System.Windows.Visibility.Hidden;
-            lblTituloEquilibrada.Visibility = System.Windows.Visibility.Visible;
-            stckEquilibrada1.Visibility = System.Windows.Visibility.Visible;
-            stckEquilibrada2.Visibility = System.Windows.Visibility.Visible;
-            lblTituloOfensiva.Visibility = System.Windows.Visibility.Hidden;
-            stckOfensiva1.Visibility = System.Windows.Visibility.Hidden;
+            btnFormacionDefensiva.Visibility = Visibility.Hidden;
+            btnFormacionOfensiva.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Visible;
         }
 
         private void BtnFormacionOfensiva_Click(object sender, RoutedEventArgs e)
         {
-            lblTituloDefensiva.Visibility = System.Windows.Visibility.Hidden;
-            stckDefensiva.Visibility = System.Windows.Visibility.Hidden;
-            lblTituloEquilibrada.Visibility = System.Windows.Visibility.Hidden;
-            stckEquilibrada1.Visibility = System.Windows.Visibility.Hidden;
-            stckEquilibrada2.Visibility = System.Windows.Visibility.Hidden;
-            lblTituloOfensiva.Visibility = System.Windows.Visibility.Visible;
-            stckOfensiva1.Visibility = System.Windows.Visibility.Visible;
+            btnFormacionDefensiva.Visibility = Visibility.Hidden;
+            btnFormacionEquilibrada.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Visible;
         }
+
+        private void ChkJugadoresJovenes_Click(object sender, RoutedEventArgs e)
+        {
+            if(btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if(btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkHabilidadBalon_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkHabilidadDefensiva_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkHabilidadMental_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkHabilidadPase_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkRendimientoFisico_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChkHabilidadTiroArco_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnFormacionDefensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloDefensiva.Visibility = Visibility.Visible;
+                stckDefensiva.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionEquilibrada.Visibility == Visibility.Visible)
+            {
+                lblTituloEquilibrada.Visibility = Visibility.Visible;
+                stckEquilibrada1.Visibility = Visibility.Visible;
+                stckEquilibrada2.Visibility = Visibility.Visible;
+            }
+            else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
+            {
+                lblTituloOfensiva.Visibility = Visibility.Visible;
+                stckOfensiva1.Visibility = Visibility.Visible;
+            }
+        }
+
+        #region MOSTRAR PREGUNTA FINAL
+
+        private void BtnFormacionEquilibrada1_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada2_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada3_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada4_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada5_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada6_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionDefensiva1_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionDefensiva2_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionDefensiva3_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionDefensiva4_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada7_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada8_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada9_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada10_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada11_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionEquilibrada12_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva1_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva1_Click_1(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva2_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva3_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva4_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        private void BtnFormacionOfensiva5_Click(object sender, RoutedEventArgs e)
+        {
+            stckCaracteristica.Visibility = Visibility.Visible;
+        }
+
+        #endregion
 
     }
 }

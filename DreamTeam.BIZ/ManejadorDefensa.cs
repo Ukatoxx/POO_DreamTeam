@@ -16,6 +16,7 @@ namespace DreamTeam.BIZ
         }
 
         public List<Defensa> Listar => repositorio.Read;
+        public List<Defensa> ListarAltura => repositorio.ReadAltura;
 
         public bool Agregar(Defensa entidad)
         {

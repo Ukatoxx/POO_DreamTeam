@@ -16,6 +16,7 @@ namespace DreamTeam.BIZ
         }
 
         public List<Portero> Listar => repositorio.Read;
+        public List<Portero> ListarAltura => repositorio.ReadAltura;
 
         public bool Agregar(Portero entidad)
         {

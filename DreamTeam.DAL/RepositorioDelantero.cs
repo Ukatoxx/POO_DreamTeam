@@ -27,6 +27,19 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Delantero> ReadAltura
+        {
+            get
+            {
+                List<Delantero> datosDelantero = new List<Delantero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosDelantero = db.GetCollection<Delantero>(TableName).Find(Query.GTE("Altura", 190)).ToList();
+                }
+                return datosDelantero;
+            }
+        }
+
         public bool Create(Delantero entidad)
         {
             entidad.Id = Guid.NewGuid().ToString();

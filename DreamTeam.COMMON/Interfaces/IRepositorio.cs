@@ -9,6 +9,7 @@ namespace DreamTeam.COMMON.Interfaces
     {
         bool Create(T entidad);
         List<T> Read { get; }
+        List<T> ReadAltura { get; }
         bool Update(T entidadModificada);
         bool Delete(string Id);
         

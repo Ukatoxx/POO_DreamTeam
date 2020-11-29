@@ -27,6 +27,19 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Mediocampo> ReadAltura
+        {
+            get
+            {
+                List<Mediocampo> datosMediocampo = new List<Mediocampo>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosMediocampo = db.GetCollection<Mediocampo>(TableName).Find(Query.GTE("Altura", 190)).ToList();
+                }
+                return datosMediocampo;
+            }
+        }
+
         public bool Create(Mediocampo entidad)
         {
             entidad.Id = Guid.NewGuid().ToString();

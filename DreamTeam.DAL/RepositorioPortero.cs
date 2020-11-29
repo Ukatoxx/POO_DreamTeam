@@ -26,6 +26,18 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Portero> ReadAltura{
+            get
+            {
+                List<Portero> datosPortero = new List<Portero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.GTE("Altura",190)).ToList();
+                }
+                return datosPortero;
+            }
+        }
+
         public bool Create(Portero entidad)
         {
             entidad.Id = Guid.NewGuid().ToString();
