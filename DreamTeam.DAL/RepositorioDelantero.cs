@@ -27,6 +27,20 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Delantero> ReadEdad
+        {
+            get
+            {
+                List<Delantero> datosDelantero = new List<Delantero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosDelantero = db.GetCollection<Delantero>(TableName).Find(Query.And(Query.LTE("Edad", 27),
+                        Query.EQ("PosicionEspecifica", "Delantero"))).ToList();
+                }
+                return datosDelantero;
+            }
+        }
+
         public List<Delantero> ReadAltura
         {
             get

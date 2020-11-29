@@ -26,6 +26,22 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Defensa> ReadEdad
+        {
+            get
+            {
+                List<Defensa> datosDefensa = new List<Defensa>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    //datosDefensa = db.GetCollection<Defensa>(TableName).Find(Query.LTE("Edad", 27)).ToList();
+                    datosDefensa = db.GetCollection<Defensa>(TableName).Find(Query.And(Query.LTE("Edad", 27),
+                        Query.Or(Query.EQ("PosicionEspecifica", "Defensa Central"), Query.EQ("PosicionEspecifica", "Lateral Izquierdo"),
+                        Query.EQ("PosicionEspecifica", "Lateral Derecho")))).ToList();
+                }
+                return datosDefensa;
+            }
+        }
+
         public List<Defensa> ReadAltura
         {
             get

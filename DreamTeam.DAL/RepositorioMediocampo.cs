@@ -27,6 +27,21 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Mediocampo> ReadEdad
+        {
+            get
+            {
+                List<Mediocampo> datosMediocampo = new List<Mediocampo>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosMediocampo = db.GetCollection<Mediocampo>(TableName).Find(Query.And(Query.LTE("Edad", 27),
+                        Query.Or(Query.EQ("PosicionEspecifica", "Mediocentro Defensivo"), Query.EQ("PosicionEspecifica", "Medio Izquierdo"),
+                        Query.EQ("PosicionEspecifica", "Medio Derecho")))).ToList();
+                }
+                return datosMediocampo;
+            }
+        }
+
         public List<Mediocampo> ReadAltura
         {
             get

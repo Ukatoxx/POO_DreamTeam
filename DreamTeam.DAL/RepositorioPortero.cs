@@ -26,6 +26,20 @@ namespace DreamTeam.DAL
             }
         }
 
+        public List<Portero> ReadEdad
+        {
+            get
+            {
+                List<Portero> datosPortero = new List<Portero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.LTE("Edad", 27)).ToList();
+                    
+                }
+                return datosPortero;
+            }
+        }
+
         public List<Portero> ReadAltura{
             get
             {

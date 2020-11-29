@@ -30,15 +30,19 @@ namespace Dreamteam.GUI.Usuario
             Editar
         }
 
+        #region MANEJADORES
         IManejadorPortero manejadorPortero;
         IManejadorDefensa manejadorDefensa;
         IManejadorMediocampo manejadorMediocampo;
         IManejadorDelantero manejadorDelantero;
+        #endregion
 
+        #region ACCIONES
         accion accionPortero;
         accion accionDefensa;
         accion accionMediocampo;
         accion accionDelantero;
+        #endregion
 
         public MainWindow()
         {
@@ -69,6 +73,11 @@ namespace Dreamteam.GUI.Usuario
             lblTituloOfensiva.Visibility = System.Windows.Visibility.Hidden;
             stckOfensiva1.Visibility = System.Windows.Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Hidden;
+            lblPortero.Visibility = Visibility.Hidden;
+            lblDefensa.Visibility = Visibility.Hidden;
+            lblMediocampo.Visibility = Visibility.Hidden;
+            lblDelantero.Visibility = Visibility.Hidden;
+            btnVolver.Visibility = Visibility.Hidden;
         }
 
         private void BotonesModoEdicion(bool value)
@@ -767,6 +776,7 @@ namespace Dreamteam.GUI.Usuario
         //
         #endregion
 
+        #region visibilidad formaciones
         private void BtnFormacionDefensiva_Click(object sender, RoutedEventArgs e)
         {
             btnFormacionEquilibrada.Visibility = Visibility.Hidden;
@@ -787,7 +797,7 @@ namespace Dreamteam.GUI.Usuario
             btnFormacionEquilibrada.Visibility = Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Visible;
         }
-
+        
         private void ChkJugadoresJovenes_Click(object sender, RoutedEventArgs e)
         {
             if(btnFormacionDefensiva.Visibility == Visibility.Visible)
@@ -927,92 +937,140 @@ namespace Dreamteam.GUI.Usuario
                 stckOfensiva1.Visibility = Visibility.Visible;
             }
         }
+        #endregion
 
-        #region MOSTRAR PREGUNTA FINAL
-
-        private void BtnFormacionEquilibrada1_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
-
-        private void BtnFormacionEquilibrada2_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
-
-        private void BtnFormacionEquilibrada3_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
-
-        private void BtnFormacionEquilibrada4_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
-
-        private void BtnFormacionEquilibrada5_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
-
-        private void BtnFormacionEquilibrada6_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
+        #region MOSTRAR RESULTADOS FINALES
 
         private void BtnFormacionDefensiva1_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            if(chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarEdad;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarEdad;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarEdad;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+            }
+            else if(chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
+            else if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
+            else if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
+            else if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
+            else if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
+            else if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+
+            }
         }
 
         private void BtnFormacionDefensiva2_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionDefensiva3_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionDefensiva4_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
+        }
+
+        private void BtnFormacionEquilibrada1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFormacionEquilibrada2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFormacionEquilibrada3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFormacionEquilibrada4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFormacionEquilibrada5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFormacionEquilibrada6_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void BtnFormacionEquilibrada7_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionEquilibrada8_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionEquilibrada9_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionEquilibrada10_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionEquilibrada11_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionEquilibrada12_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionOfensiva1_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnFormacionOfensiva1_Click_1(object sender, RoutedEventArgs e)
@@ -1042,5 +1100,28 @@ namespace Dreamteam.GUI.Usuario
 
         #endregion
 
+        private void BtnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            dtgPorteroSeleccionado.ItemsSource = null;
+            dtgDefensaSeleccionado.ItemsSource = null;
+            dtgMediocampoSeleccionado.ItemsSource = null;
+            dtgDelanteroSeleccionado.ItemsSource = null;
+            btnVolver.Visibility = Visibility.Hidden;
+            lblPortero.Visibility = Visibility.Hidden;
+            lblDefensa.Visibility = Visibility.Hidden;
+            lblMediocampo.Visibility = Visibility.Hidden;
+            lblDelantero.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Hidden;
+            lblTituloDefensiva.Visibility = Visibility.Hidden;
+            stckDefensiva.Visibility = Visibility.Hidden;
+            lblTituloEquilibrada.Visibility = Visibility.Hidden;
+            stckEquilibrada1.Visibility = Visibility.Hidden;
+            stckEquilibrada2.Visibility = Visibility.Hidden;
+            lblTituloOfensiva.Visibility = Visibility.Hidden;
+            stckOfensiva1.Visibility = Visibility.Hidden;
+            btnFormacionEquilibrada.Visibility = Visibility.Visible;
+            btnFormacionDefensiva.Visibility = Visibility.Visible;
+            btnFormacionOfensiva.Visibility = Visibility.Visible;
+        }
     }
 }

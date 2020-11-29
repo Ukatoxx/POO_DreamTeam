@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dreamteam.GUI.Usuario"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1000">
     <TabControl>
         <TabItem Header="Portero">
             <Grid>
@@ -438,13 +438,13 @@
                         <Label x:Name="lblTituloDefensiva">Posibles Formaciones Defensivas</Label>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="stckDefensiva">
-                        <RadioButton x:Name="btnFormacionDefensiva1" Click="BtnFormacionDefensiva1_Click">5-3-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva532" Click="BtnFormacionDefensiva1_Click">5-3-2</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva2" Click="BtnFormacionDefensiva2_Click">5-5-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva541" Click="BtnFormacionDefensiva2_Click">5-4-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva3" Click="BtnFormacionDefensiva3_Click">5-2-2-1</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva5221" Click="BtnFormacionDefensiva3_Click">5-2-2-1</RadioButton>
                         <Label></Label>
-                        <RadioButton x:Name="btnFormacionDefensiva4" Click="BtnFormacionDefensiva4_Click">5-2-1-2</RadioButton>
+                        <RadioButton x:Name="btnFormacionDefensiva5212" Click="BtnFormacionDefensiva4_Click">5-2-1-2</RadioButton>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
                         <Label x:Name="lblTituloEquilibrada">Posibles Formaciones Equilibradas</Label>
@@ -494,7 +494,22 @@
                         <RadioButton x:Name="btnFormacionOfensiva5" 
                                      Click="BtnFormacionOfensiva5_Click">3-1-4-2</RadioButton>
                     </StackPanel>
-                    
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <Label x:Name="lblPortero">Porteros Sugeridos</Label>
+                    <DataGrid x:Name="dtgPorteroSeleccionado" IsReadOnly="True" Grid.ColumnSpan="4" 
+                          HorizontalAlignment="Center"/>
+                        <Label x:Name="lblDefensa">Defensas Sugeridos</Label>
+                    <DataGrid x:Name="dtgDefensaSeleccionado" IsReadOnly="True" Grid.ColumnSpan="4" 
+                           HorizontalAlignment="Center"/>
+                        <Label x:Name="lblMediocampo">Mediocampistas Sugeridos</Label>
+                    <DataGrid x:Name="dtgMediocampoSeleccionado" IsReadOnly="True" Grid.ColumnSpan="4" 
+                           HorizontalAlignment="Center"/>
+                        <Label x:Name="lblDelantero">Delanteros Sugeridos</Label>
+                    <DataGrid x:Name="dtgDelanteroSeleccionado" IsReadOnly="True" Grid.ColumnSpan="4" 
+                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button x:Name="btnVolver" Click="BtnVolver_Click">Volver</Button>
+
                 </WrapPanel>
             </Grid>
         </TabItem>

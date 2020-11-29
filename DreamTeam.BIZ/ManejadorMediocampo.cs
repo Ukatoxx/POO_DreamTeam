@@ -17,6 +17,7 @@ namespace DreamTeam.BIZ
 
         public List<Mediocampo> Listar => repositorio.Read;
         public List<Mediocampo> ListarAltura => repositorio.ReadAltura;
+        public List<Mediocampo> ListarEdad => repositorio.ReadEdad;
 
         public bool Agregar(Mediocampo entidad)
         {

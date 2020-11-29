@@ -17,6 +17,7 @@ namespace DreamTeam.BIZ
 
         public List<Delantero> Listar => repositorio.Read;
         public List<Delantero> ListarAltura => repositorio.ReadAltura;
+        public List<Delantero> ListarEdad => repositorio.ReadEdad;
 
         public bool Agregar(Delantero entidad)
         {
