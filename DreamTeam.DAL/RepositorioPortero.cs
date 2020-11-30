@@ -46,11 +46,70 @@ namespace DreamTeam.DAL
                 List<Portero> datosPortero = new List<Portero>();
                 using (var db = new LiteDatabase(DBName))
                 {
-                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.GTE("Altura",190)).ToList();
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.GTE("Altura", 190)).ToList();
                 }
                 return datosPortero;
             }
         }
+
+        public List<Portero> ReadAlturaBaja
+        {
+            get
+            {
+                List<Portero> datosPortero = new List<Portero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.LTE("Altura", 190)).ToList();
+                }
+                return datosPortero;
+            }
+        }
+
+        public List<Portero> ReadPresupuestoBajo
+        {
+            get
+            {
+                List<Portero> datosPortero = new List<Portero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.LTE("Sueldo", 120000)).ToList();
+                }
+                return datosPortero;
+            }
+        }
+
+        public List<Portero> ReadPresupuestoAlto
+        {
+            get
+            {
+                List<Portero> datosPortero = new List<Portero>();
+                using (var db = new LiteDatabase(DBName))
+                {
+                    datosPortero = db.GetCollection<Portero>(TableName).Find(Query.GTE("Sueldo", 120000)).ToList();
+                }
+                return datosPortero;
+            }
+        }
+
+        public List<Portero> ReadAlturaBaja5 => throw new NotImplementedException();
+
+        public List<Portero> ReadAlturaBaja3 => throw new NotImplementedException();
+
+        public List<Portero> ReadAlturaBaja2 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoBajo5 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoBajo3 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoBajo2 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoAlto5 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoAlto3 => throw new NotImplementedException();
+
+        public List<Portero> ReadPresupuestoAlto2 => throw new NotImplementedException();
+
+        public List<Portero> ReadEdadMed4 => throw new NotImplementedException();
 
         public bool Create(Portero entidad)
         {

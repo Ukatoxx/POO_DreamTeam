@@ -69,7 +69,6 @@ namespace Dreamteam.GUI.Usuario
             stckDefensiva.Visibility = System.Windows.Visibility.Hidden;
             lblTituloEquilibrada.Visibility = System.Windows.Visibility.Hidden;
             stckEquilibrada1.Visibility = System.Windows.Visibility.Hidden;
-            stckEquilibrada2.Visibility = System.Windows.Visibility.Hidden;
             lblTituloOfensiva.Visibility = System.Windows.Visibility.Hidden;
             stckOfensiva1.Visibility = System.Windows.Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Hidden;
@@ -779,6 +778,23 @@ namespace Dreamteam.GUI.Usuario
         #region visibilidad formaciones
         private void BtnFormacionDefensiva_Click(object sender, RoutedEventArgs e)
         {
+            dtgPorteroSeleccionado.ItemsSource = null;
+            dtgDefensaSeleccionado.ItemsSource = null;
+            dtgMediocampoSeleccionado.ItemsSource = null;
+            dtgDelanteroSeleccionado.ItemsSource = null;
+            btnVolver.Visibility = Visibility.Hidden;
+            lblPortero.Visibility = Visibility.Hidden;
+            lblDefensa.Visibility = Visibility.Hidden;
+            lblMediocampo.Visibility = Visibility.Hidden;
+            lblDelantero.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Hidden;
+            lblTituloDefensiva.Visibility = Visibility.Hidden;
+            stckDefensiva.Visibility = Visibility.Hidden;
+            lblTituloEquilibrada.Visibility = Visibility.Hidden;
+            stckEquilibrada1.Visibility = Visibility.Hidden;
+            lblTituloOfensiva.Visibility = Visibility.Hidden;
+            stckOfensiva1.Visibility = Visibility.Hidden;
+
             btnFormacionEquilibrada.Visibility = Visibility.Hidden;
             btnFormacionOfensiva.Visibility = Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Visible;
@@ -786,6 +802,23 @@ namespace Dreamteam.GUI.Usuario
 
         private void BtnFormacionEquilibrada_Click(object sender, RoutedEventArgs e)
         {
+            dtgPorteroSeleccionado.ItemsSource = null;
+            dtgDefensaSeleccionado.ItemsSource = null;
+            dtgMediocampoSeleccionado.ItemsSource = null;
+            dtgDelanteroSeleccionado.ItemsSource = null;
+            btnVolver.Visibility = Visibility.Hidden;
+            lblPortero.Visibility = Visibility.Hidden;
+            lblDefensa.Visibility = Visibility.Hidden;
+            lblMediocampo.Visibility = Visibility.Hidden;
+            lblDelantero.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Hidden;
+            lblTituloDefensiva.Visibility = Visibility.Hidden;
+            stckDefensiva.Visibility = Visibility.Hidden;
+            lblTituloEquilibrada.Visibility = Visibility.Hidden;
+            stckEquilibrada1.Visibility = Visibility.Hidden;
+            lblTituloOfensiva.Visibility = Visibility.Hidden;
+            stckOfensiva1.Visibility = Visibility.Hidden;
+
             btnFormacionDefensiva.Visibility = Visibility.Hidden;
             btnFormacionOfensiva.Visibility = Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Visible;
@@ -793,6 +826,23 @@ namespace Dreamteam.GUI.Usuario
 
         private void BtnFormacionOfensiva_Click(object sender, RoutedEventArgs e)
         {
+            dtgPorteroSeleccionado.ItemsSource = null;
+            dtgDefensaSeleccionado.ItemsSource = null;
+            dtgMediocampoSeleccionado.ItemsSource = null;
+            dtgDelanteroSeleccionado.ItemsSource = null;
+            btnVolver.Visibility = Visibility.Hidden;
+            lblPortero.Visibility = Visibility.Hidden;
+            lblDefensa.Visibility = Visibility.Hidden;
+            lblMediocampo.Visibility = Visibility.Hidden;
+            lblDelantero.Visibility = Visibility.Hidden;
+            stckCaracteristica.Visibility = Visibility.Hidden;
+            lblTituloDefensiva.Visibility = Visibility.Hidden;
+            stckDefensiva.Visibility = Visibility.Hidden;
+            lblTituloEquilibrada.Visibility = Visibility.Hidden;
+            stckEquilibrada1.Visibility = Visibility.Hidden;
+            lblTituloOfensiva.Visibility = Visibility.Hidden;
+            stckOfensiva1.Visibility = Visibility.Hidden;
+
             btnFormacionDefensiva.Visibility = Visibility.Hidden;
             btnFormacionEquilibrada.Visibility = Visibility.Hidden;
             stckCaracteristica.Visibility = Visibility.Visible;
@@ -809,7 +859,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -818,7 +867,7 @@ namespace Dreamteam.GUI.Usuario
             }
         }
 
-        private void ChkHabilidadBalon_Click(object sender, RoutedEventArgs e)
+        private void ChkJugadoresAltos_Click(object sender, RoutedEventArgs e)
         {
             if (btnFormacionDefensiva.Visibility == Visibility.Visible)
             {
@@ -829,7 +878,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -838,7 +886,7 @@ namespace Dreamteam.GUI.Usuario
             }
         }
 
-        private void ChkHabilidadDefensiva_Click(object sender, RoutedEventArgs e)
+        private void ChkJugadoresBajos_Click(object sender, RoutedEventArgs e)
         {
             if (btnFormacionDefensiva.Visibility == Visibility.Visible)
             {
@@ -849,7 +897,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -858,7 +905,7 @@ namespace Dreamteam.GUI.Usuario
             }
         }
 
-        private void ChkHabilidadMental_Click(object sender, RoutedEventArgs e)
+        private void ChkPresupuestoBajo_Click(object sender, RoutedEventArgs e)
         {
             if (btnFormacionDefensiva.Visibility == Visibility.Visible)
             {
@@ -869,7 +916,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -878,7 +924,7 @@ namespace Dreamteam.GUI.Usuario
             }
         }
 
-        private void ChkHabilidadPase_Click(object sender, RoutedEventArgs e)
+        private void ChkPresupuestoAlto_Click(object sender, RoutedEventArgs e)
         {
             if (btnFormacionDefensiva.Visibility == Visibility.Visible)
             {
@@ -889,7 +935,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -909,7 +954,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -929,7 +973,6 @@ namespace Dreamteam.GUI.Usuario
             {
                 lblTituloEquilibrada.Visibility = Visibility.Visible;
                 stckEquilibrada1.Visibility = Visibility.Visible;
-                stckEquilibrada2.Visibility = Visibility.Visible;
             }
             else if (btnFormacionOfensiva.Visibility == Visibility.Visible)
             {
@@ -940,6 +983,14 @@ namespace Dreamteam.GUI.Usuario
         #endregion
 
         #region MOSTRAR RESULTADOS FINALES
+
+        private void limpiarCaracteristicas() {
+            chkJugadoresJovenes.IsChecked = false;
+            ChkJugadoresAltos.IsChecked = false;
+            ChkJugadoresBajos.IsChecked = false;
+            ChkPresupuestoBajo.IsChecked = false;
+            ChkPresupuestoAlto.IsChecked = false;
+        }
 
         private void BtnFormacionDefensiva1_Click(object sender, RoutedEventArgs e)
         {
@@ -966,137 +1017,894 @@ namespace Dreamteam.GUI.Usuario
                 lblDefensa.Visibility = Visibility.Visible;
                 lblMediocampo.Visibility = Visibility.Visible;
                 lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva532.IsChecked = false;
+                limpiarCaracteristicas();
             }
-            else if(chkJugadoresJovenes.IsChecked ?? true)
+            else if(ChkJugadoresAltos.IsChecked ?? true)
             {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
 
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAltura;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarAltura;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAltura;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva532.IsChecked = false;
+                limpiarCaracteristicas();
             }
-            else if (chkJugadoresJovenes.IsChecked ?? true)
+            else if (ChkJugadoresBajos.IsChecked ?? true)
             {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
 
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAlturaBaja5;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarAlturaBaja3;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAlturaBaja2;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva532.IsChecked = false;
+                limpiarCaracteristicas();
             }
-            else if (chkJugadoresJovenes.IsChecked ?? true)
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
             {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
 
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoBajo5;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarPresupuestoBajo3;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoBajo2;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva532.IsChecked = false;
+                limpiarCaracteristicas();
             }
-            else if (chkJugadoresJovenes.IsChecked ?? true)
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
             {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
 
-            }
-            else if (chkJugadoresJovenes.IsChecked ?? true)
-            {
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoAlto5;
 
-            }
-            else if (chkJugadoresJovenes.IsChecked ?? true)
-            {
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarPresupuestoAlto3;
 
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoAlto2;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva532.IsChecked = false;
+                limpiarCaracteristicas();
             }
         }
 
         private void BtnFormacionDefensiva2_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarEdad;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarEdadMed4;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarEdad;
+
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva541.IsChecked = false;
+                limpiarCaracteristicas();
+
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAltura;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva541.IsChecked = false;
+                limpiarCaracteristicas();
+
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAlturaBaja5;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva541.IsChecked = false;
+                limpiarCaracteristicas();
+
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoBajo5;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva541.IsChecked = false;
+                limpiarCaracteristicas();
+
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoAlto5;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva541.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
 
         private void BtnFormacionDefensiva3_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
-        private void BtnFormacionDefensiva4_Click(object sender, RoutedEventArgs e)
-        {
-            
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarEdad;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva5221.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAltura;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva5221.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarAlturaBaja5;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva5221.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoBajo5;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva5221.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarPresupuestoAlto5;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionDefensiva5221.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
+        
 
         private void BtnFormacionEquilibrada1_Click(object sender, RoutedEventArgs e)
         {
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
+                manejadorDefensa = new ManejadorDefensa(new RepositorioDefensa());
+                dtgDefensaSeleccionado.ItemsSource = null;
+                dtgDefensaSeleccionado.ItemsSource = manejadorDefensa.ListarEdad;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarEdad;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAltura;
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAlturaBaja2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoBajo2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoAlto2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
 
         private void BtnFormacionEquilibrada2_Click(object sender, RoutedEventArgs e)
         {
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
 
         private void BtnFormacionEquilibrada3_Click(object sender, RoutedEventArgs e)
         {
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarEdad;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarAltura;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarAlturaBaja3;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarPresupuestoBajo3;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+                manejadorMediocampo = new ManejadorMediocampo(new RepositorioMediocampo());
+                dtgMediocampoSeleccionado.ItemsSource = null;
+                dtgMediocampoSeleccionado.ItemsSource = manejadorMediocampo.ListarPresupuestoAlto3;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionEquilibrada3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
-
-        private void BtnFormacionEquilibrada4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnFormacionEquilibrada5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnFormacionEquilibrada6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnFormacionEquilibrada7_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnFormacionEquilibrada8_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnFormacionEquilibrada9_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnFormacionEquilibrada10_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnFormacionEquilibrada11_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnFormacionEquilibrada12_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        
 
         private void BtnFormacionOfensiva1_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
-        private void BtnFormacionOfensiva1_Click_1(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarEdad;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAltura;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarAlturaBaja2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoBajo2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+                manejadorDelantero = new ManejadorDelantero(new RepositorioDelantero());
+                dtgDelanteroSeleccionado.ItemsSource = null;
+                dtgDelanteroSeleccionado.ItemsSource = manejadorDelantero.ListarPresupuestoAlto2;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva1.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
 
         private void BtnFormacionOfensiva2_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva2.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
 
         private void BtnFormacionOfensiva3_Click(object sender, RoutedEventArgs e)
         {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
+            if (chkJugadoresJovenes.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarEdad;
 
-        private void BtnFormacionOfensiva4_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
-        }
 
-        private void BtnFormacionOfensiva5_Click(object sender, RoutedEventArgs e)
-        {
-            stckCaracteristica.Visibility = Visibility.Visible;
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresAltos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAltura;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkJugadoresBajos.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarAlturaBaja;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoBajo.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoBajo;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
+            else if (ChkPresupuestoAlto.IsChecked ?? true)
+            {
+                manejadorPortero = new ManejadorPortero(new RepositorioPortero());
+                dtgPorteroSeleccionado.ItemsSource = null;
+                dtgPorteroSeleccionado.ItemsSource = manejadorPortero.ListarPresupuestoAlto;
+
+
+
+                btnVolver.Visibility = Visibility.Visible;
+                lblPortero.Visibility = Visibility.Visible;
+                lblDefensa.Visibility = Visibility.Visible;
+                lblMediocampo.Visibility = Visibility.Visible;
+                lblDelantero.Visibility = Visibility.Visible;
+                btnFormacionOfensiva3.IsChecked = false;
+                limpiarCaracteristicas();
+            }
         }
+        
 
         #endregion
 
@@ -1116,7 +1924,6 @@ namespace Dreamteam.GUI.Usuario
             stckDefensiva.Visibility = Visibility.Hidden;
             lblTituloEquilibrada.Visibility = Visibility.Hidden;
             stckEquilibrada1.Visibility = Visibility.Hidden;
-            stckEquilibrada2.Visibility = Visibility.Hidden;
             lblTituloOfensiva.Visibility = Visibility.Hidden;
             stckOfensiva1.Visibility = Visibility.Hidden;
             btnFormacionEquilibrada.Visibility = Visibility.Visible;

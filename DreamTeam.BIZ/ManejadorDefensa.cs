@@ -17,7 +17,32 @@ namespace DreamTeam.BIZ
 
         public List<Defensa> Listar => repositorio.Read;
         public List<Defensa> ListarAltura => repositorio.ReadAltura;
+        public List<Defensa> ListarAlturaBaja5 => repositorio.ReadAlturaBaja5;
         public List<Defensa> ListarEdad => repositorio.ReadEdad;
+
+        public List<Defensa> ListarAlturaBaja3 => throw new NotImplementedException();
+
+        public List<Defensa> ListarAlturaBaja2 => throw new NotImplementedException();
+
+        public List<Defensa> ListarAlturaBaja => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoBajo => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoBajo5 => repositorio.ReadPresupuestoBajo5;
+
+        public List<Defensa> ListarPresupuestoBajo3 => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoBajo2 => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoAlto => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoAlto5 => repositorio.ReadPresupuestoAlto5;
+
+        public List<Defensa> ListarPresupuestoAlto3 => throw new NotImplementedException();
+
+        public List<Defensa> ListarPresupuestoAlto2 => throw new NotImplementedException();
+
+        public List<Defensa> ListarEdadMed4 => throw new NotImplementedException();
 
         public bool Agregar(Defensa entidad)
         {
